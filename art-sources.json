@@ -1,0 +1,221 @@
+{
+  "retrievedAt": "2026-11-23",
+  "images": [
+    {
+      "id": "barbarian",
+      "file": "art-barbarian.png",
+      "width": 720,
+      "height": 688,
+      "sourcePage": "https://dicethrone.com/heroes/barbarian/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-2.png",
+      "bytes": 754739
+    },
+    {
+      "id": "moon-elf",
+      "file": "art-moon-elf.png",
+      "width": 720,
+      "height": 783,
+      "sourcePage": "https://dicethrone.com/heroes/moon-elf/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Moon-Elf-Hero.png",
+      "bytes": 658281
+    },
+    {
+      "id": "pyromancer",
+      "file": "art-pyromancer.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/pyromancer/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Pyrohero.png",
+      "bytes": 727212
+    },
+    {
+      "id": "shadow-thief",
+      "file": "art-shadow-thief.png",
+      "width": 720,
+      "height": 688,
+      "sourcePage": "https://dicethrone.com/heroes/shadow-thief/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-3.png",
+      "bytes": 646845
+    },
+    {
+      "id": "monk",
+      "file": "art-monk.png",
+      "width": 720,
+      "height": 783,
+      "sourcePage": "https://dicethrone.com/heroes/monk/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Images-1-3.png",
+      "bytes": 705742
+    },
+    {
+      "id": "paladin",
+      "file": "art-paladin.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/paladin/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-20.png",
+      "bytes": 789214
+    },
+    {
+      "id": "ninja",
+      "file": "art-ninja.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/ninja/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-19.png",
+      "bytes": 652707
+    },
+    {
+      "id": "treant",
+      "file": "art-treant.png",
+      "width": 720,
+      "height": 811,
+      "sourcePage": "https://dicethrone.com/heroes/treant/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-18.png",
+      "bytes": 862775
+    },
+    {
+      "id": "gunslinger",
+      "file": "art-gunslinger.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/gunslinger/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/GunslingerHero.png",
+      "bytes": 724904
+    },
+    {
+      "id": "samurai",
+      "file": "art-samurai.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/samurai/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/samuraihero.png",
+      "bytes": 814408
+    },
+    {
+      "id": "tactician",
+      "file": "art-tactician.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/tactician/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-14.png",
+      "bytes": 489023
+    },
+    {
+      "id": "huntress",
+      "file": "art-huntress.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/huntress/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-15.png",
+      "bytes": 712831
+    },
+    {
+      "id": "cursed-pirate",
+      "file": "art-cursed-pirate.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/cursed-pirate/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Images-1.png",
+      "bytes": 739314
+    },
+    {
+      "id": "artificer",
+      "file": "art-artificer.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/artificer/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Images-1-1.png",
+      "bytes": 828653
+    },
+    {
+      "id": "seraph",
+      "file": "art-seraph.png",
+      "width": 720,
+      "height": 783,
+      "sourcePage": "https://dicethrone.com/heroes/seraph/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/04/Images-1-2.png",
+      "bytes": 807989
+    },
+    {
+      "id": "vampire-lord",
+      "file": "art-vampire-lord.png",
+      "width": 720,
+      "height": 783,
+      "sourcePage": "https://dicethrone.com/heroes/vampire-lord/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-16.png",
+      "bytes": 481401
+    },
+    {
+      "id": "thor",
+      "file": "art-thor.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-2-2.png",
+      "bytes": 828180
+    },
+    {
+      "id": "loki",
+      "file": "art-loki.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-27.png",
+      "bytes": 666795
+    },
+    {
+      "id": "black-panther",
+      "file": "art-black-panther.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-23.png",
+      "bytes": 567828
+    },
+    {
+      "id": "black-widow",
+      "file": "art-black-widow.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-24.png",
+      "bytes": 629460
+    },
+    {
+      "id": "captain-marvel",
+      "file": "art-captain-marvel.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-25.png",
+      "bytes": 662421
+    },
+    {
+      "id": "spider-man",
+      "file": "art-spider-man.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-2-1.png",
+      "bytes": 557665
+    },
+    {
+      "id": "scarlet-witch",
+      "file": "art-scarlet-witch.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-2.png",
+      "bytes": 747275
+    },
+    {
+      "id": "doctor-strange",
+      "file": "art-doctor-strange.png",
+      "width": 720,
+      "height": 755,
+      "sourcePage": "https://dicethrone.com/heroes/thor/",
+      "imageUrl": "https://dicethrone.com/wp-content/uploads/2026/06/Images-1-26.png",
+      "bytes": 709694
+    }
+  ]
+}

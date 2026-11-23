@@ -1,0 +1,51 @@
+/* Official portraits retain the source artwork. Cropping is display-only. */
+.hero-card{border-radius:14px;isolation:isolate;min-height:0;background:#132330;transition:border-color .2s,box-shadow .2s,transform .2s}
+.hero-card .hero-art{height:auto;aspect-ratio:1 / 1.02;background:#172530;display:block}
+.hero-art::before{display:none}
+.hero-art::after{inset:0;width:auto;height:auto;border:0;border-radius:0;transform:none;background:linear-gradient(180deg,#07121b44,transparent 35%,#101c2955 78%,#101c29);z-index:1}
+.hero-portrait{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 36%;transition:transform .35s ease;position:relative}
+.hero-card.selected .hero-portrait{transform:scale(1.045)}
+.hero-card.selected{box-shadow:0 0 0 1px var(--gold),0 9px 28px #0006}
+.hero-card .role{z-index:2;color:#f8efd9;background:#07141dc9;backdrop-filter:blur(8px);padding:5px 8px;border-radius:4px;font-weight:600;letter-spacing:.04em}
+.hero-card .chosen{z-index:2;background:#09141cd9;border-color:#b8b4a885}
+.hero-card.selected .chosen{background:var(--gold);color:#14212b}
+.hero-card .hero-name{padding:0 17px 17px;margin-top:-6px;z-index:2;background:#101c29}
+.hero-name strong{font-size:1.12rem;letter-spacing:.05em}
+.hero-name small{color:#a7bac6}
+.hero-card:disabled{opacity:.78;filter:saturate(.35)}
+.hero-card:disabled .hero-name small{font-size:.7rem}
+.lobby-main{padding-top:36px}
+.intro{margin-bottom:22px}
+.intro h1{font-weight:650}
+.combatant{position:relative;overflow:hidden;isolation:isolate;grid-template-columns:82px minmax(0,1fr) auto;min-height:118px}
+.combatant::before{content:'';position:absolute;inset:0;z-index:-2;background-image:var(--portrait);background-position:75% 37%;background-size:cover;opacity:.2;filter:saturate(.7)}
+.combatant::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#101e28dd 20%,#111e28a6 65%,#101c29e8)}
+.avatar{width:82px;height:86px;border-radius:10px;overflow:hidden;background:#12222e;border-color:color-mix(in srgb,var(--hero) 55%,#223342);box-shadow:0 5px 15px #0004}
+.avatar .hero-portrait{object-position:50% 35%;transform:scale(1.13)}
+.combatant h2{text-shadow:0 2px 8px #000b}
+.hero-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px}
+.effects-toggle{font-size:.8rem!important;min-height:40px;color:#dac99f}
+.effects-toggle[aria-pressed=false]{color:var(--muted)}
+.effects-toggle::before{content:'✦';padding-right:6px;color:var(--gold)}
+.hero-detail-art{height:230px;width:100%;object-fit:cover;object-position:50% 35%;border-radius:10px;margin-bottom:16px}
+.credits-link{color:#d6c599;text-decoration:underline;text-underline-offset:3px}
+#fx-layer{position:fixed;inset:0;pointer-events:none;z-index:45;overflow:hidden;contain:strict}
+#fx-layer canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0}
+#fx-layer.active canvas{opacity:1}
+.fx-float,.fx-banner{position:absolute;transform:translate(-50%,0);font-weight:850;color:var(--fx-color);text-shadow:0 2px 4px #000,0 0 16px #000;background:#08131bed;box-shadow:0 4px 22px #0005;border:1px solid color-mix(in srgb,var(--fx-color) 45%,transparent);border-radius:8px;padding:7px 12px;font-size:1.05rem;white-space:nowrap;max-width:calc(100vw - 30px);text-overflow:ellipsis;overflow:hidden}
+.fx-banner{font-size:1.35rem;letter-spacing:.08em;padding:14px 24px;border-top:2px solid var(--fx-color);border-bottom:2px solid var(--fx-color);background:linear-gradient(90deg,#0a152be8,#0e182af7,#0a152be8);box-shadow:0 6px 40px #0006}
+.ability.ready{box-shadow:inset 0 0 20px #d0ad6f12,0 0 12px #d0ad6f0a}
+@media(hover:hover){.hero-card:hover:not(:disabled){transform:translateY(-3px)}.hero-card:hover:not(:disabled) .hero-portrait{transform:scale(1.045)}}
+@media(max-width:760px){
+  .lobby-main{padding-top:25px}.intro h1{font-size:1.95rem}
+  .hero-grid{gap:13px}.hero-card .hero-art{height:auto;aspect-ratio:1 / 1.06}
+  .hero-card .role{font-size:.6rem;padding:4px 6px;left:9px;top:9px}
+  .hero-card .chosen{right:8px;top:9px;width:21px;height:21px}
+  .hero-card .hero-name{padding:0 12px 14px}.hero-name strong{font-size:1rem}.hero-name small{font-size:.66rem}
+  .combatant{grid-template-columns:62px minmax(0,1fr) auto;min-height:101px;padding:11px;gap:10px}
+  .avatar{width:62px;height:68px;border-radius:8px}.combatant h2{font-size:1rem}.combatant .tag{font-size:.68rem}
+  .health-row{gap:7px}.health-num{min-width:55px}.health-track{min-width:25px}
+  .fx-banner{font-size:1.1rem;padding:12px 18px}.fx-float{font-size:.95rem}
+  .hero-detail-art{height:220px}
+}
+@media(prefers-reduced-motion:reduce){.hero-card,.hero-portrait{transition:none}.hero-card:hover:not(:disabled){transform:none}}
