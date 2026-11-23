@@ -30,3 +30,7 @@ test('real AI completes matches with upgrades and token spending',()=>{
  while(s.phase!=='gameover'&&n++<2500){const action=aiAction(s)||next(s);try{s=dispatch(s,action)}catch(e){throw Error(hs[i].id+' '+s.phase+' '+JSON.stringify(action)+': '+e.message)}}assert.equal(s.phase,'gameover',hs[i].id+' AI stalled')}
 });
 
+
+test('heroes with unverified core rules cannot start a match on either side',()=>{
+ for(const h of HEROES.filter(h=>h.playable===false)){assert.throws(()=>createGame(h.id,'barbarian'),/暂不可选/);assert.throws(()=>createGame('barbarian',h.id),/暂不可选/)}
+});

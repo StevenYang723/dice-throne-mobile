@@ -11889,10 +11889,7 @@
         "https://dtacademy.dev/kits/shadow-thief",
         "https://dice-throne.rulepop.com/#hero/shadow-thief"
       ],
-      "gaps": [
-        "Carducopia requires real deck/hand implementation.",
-        "Shadow Dance round-up derives global rounding rule; verify in official general rules."
-      ],
+      "gaps": [],
       "upgrades": [
         {
           "ability": "dagger-strike",
@@ -29324,7 +29321,8 @@
           "text": "防御掷 4 骰，防止 Branch + Spirit 数量的伤害；Leaf 至少 2 生长 1 精灵；Spirit 至少 2 令一名所选玩家获得泉涌。",
           "unsupported": []
         }
-      ]
+      ],
+      "availabilityReason": "精灵成长与可选消耗尚未完整核实和接入。"
     },
     {
       "id": "gunslinger",
@@ -50815,7 +50813,8 @@
             "special-upgrade"
           ]
         }
-      ]
+      ],
+      "availabilityReason": "机器人建造、选机与纳米虫结算尚未完整核实和接入。"
     },
     {
       "id": "seraph",
@@ -59877,7 +59876,7 @@
         "allListedCardsHaveOneRecord": true,
         "cardMultiplicityVerified": false
       },
-      "playable": true,
+      "playable": false,
       "referenceCards": [
         {
           "id": "limb-from-limb",
@@ -61316,7 +61315,8 @@
             "special-upgrade"
           ]
         }
-      ]
+      ],
+      "availabilityReason": "终极技能的检索与即时出牌响应尚未完整核实和接入。"
     },
     {
       "id": "thor",
@@ -73420,7 +73420,8 @@
             "special-upgrade"
           ]
         }
-      ]
+      ],
+      "availabilityReason": "完整升级牌与专属牌组尚未逐项核实。"
     },
     {
       "id": "captain-marvel",
@@ -82339,7 +82340,8 @@
           "unsupported": []
         }
       ],
-      "referenceUpgrades": []
+      "referenceUpgrades": [],
+      "availabilityReason": "完整法术牌与施法响应尚未逐项核实和接入。"
     }
   ]
 }

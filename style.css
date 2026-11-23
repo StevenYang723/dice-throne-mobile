@@ -6,3 +6,19 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 .header-actions{flex-shrink:0}.header-actions button{white-space:nowrap}.hero-actions{text-align:center;margin:10px 0}.hero-actions button{font-size:.875rem}.ability .effect-line,.hand-card p,.log-item{font-size:.875rem}.requirements{line-height:1.55}.die .sym{font-size:.75rem}.hero-art .emblem{stroke-width:2.2}.loading img{box-shadow:0 10px 40px #0004;border-radius:18px}
 @media(max-width:760px){.brand span{display:none}.app-header{gap:10px}.brand{gap:8px}.brand strong{letter-spacing:.05em}.header-actions button{padding:7px 9px;font-size:.8rem}.ability{min-height:108px}.ability .requirements{font-size:.8rem}.ability .effect-line{font-size:.8rem}.hand-card p{font-size:.875rem}.die .sym{font-size:.75rem}.dice-help{font-size:.8rem}.phase-description{font-size:.875rem}.mobile-tabs button{font-size:.875rem}.token{font-size:.8rem}.combatant .tag{font-size:.75rem}.notice{font-size:.8rem}.notice button{white-space:nowrap}}
+:root{--status-beneficial:#91e3c4;--status-resource:#f5cf83;--status-harmful:#ffaaa4;--status-special:#d0bcff}
+.status-beneficial{--status-ink:var(--status-beneficial);color:var(--status-ink)}
+.status-resource{--status-ink:var(--status-resource);color:var(--status-ink)}
+.status-harmful{--status-ink:var(--status-harmful);color:var(--status-ink)}
+.status-special{--status-ink:var(--status-special);color:var(--status-ink)}
+.status-word{font-weight:800;letter-spacing:.02em}
+.token{display:inline-flex;align-items:center;gap:7px;font-weight:800!important;color:var(--status-ink,#f1eada)!important;border-color:color-mix(in srgb,var(--status-ink,#91e3c4) 60%,#20303d)!important;background:color-mix(in srgb,var(--status-ink,#91e3c4) 13%,#10202c)!important}
+.token:before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--status-ink);flex-shrink:0}
+.token strong,.token-count{font-weight:800}
+.token-count{border-radius:5px;background:#07121d70;min-width:18px;text-align:center;padding:1px 4px}
+.token.usable{outline:1px solid var(--gold);outline-offset:2px}
+.status-legend{display:flex;flex-wrap:wrap;gap:15px;font-size:.8rem;margin:12px 0 18px}
+.hero-card:disabled{opacity:.66;cursor:not-allowed;filter:saturate(.45)}
+.hero-card:disabled .hero-name small{color:#f0b4a8;line-height:1.5}
+.hero-card:disabled .chosen{display:none}
+.ability .effect-line{overflow-wrap:anywhere}
