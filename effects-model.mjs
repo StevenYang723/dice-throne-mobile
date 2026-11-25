@@ -24,7 +24,7 @@ export function battleEffects(before, after, action) {
     events.push({kind:'roll', indices:after.pending.defenseDice.map((_,i)=>i)});
   }
   // A failed blind check or a changed dice pattern never produces a cast.
-  if (action.type === 'activate' && after.pending && !before.pending) {
+  if ((action.type === 'activate' || before.decision?.action.type === 'activate') && after.pending && !before.pending) {
     events.push({kind:'cast', player:actor, target:1-actor, hero:before.players[actor].hero,
       name:after.pending.name, ultimate:after.pending.type==='ultimate'});
   }

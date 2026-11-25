@@ -1,4 +1,4 @@
-import {battleEffects,HERO_FX} from './effects-model.mjs?v=0.3.0';
+import {battleEffects,HERO_FX} from './effects-model.mjs?v=0.4.0';
 
 // A single, bounded canvas stays outside the rerendered game UI.
 // Particle randomness is cosmetic and independent of the deterministic rules.

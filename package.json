@@ -1,10 +1,10 @@
 {
   "name": "dice-throne-mobile",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test engine.test.mjs effects.test.mjs",
+    "test": "node --test engine.test.mjs effects.test.mjs choices.test.mjs",
     "start": "node server.mjs",
     "build": "node build.mjs"
   }

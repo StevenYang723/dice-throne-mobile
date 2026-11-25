@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {setHeroes,HEROES,hero,createGame,dispatch,matches,abilities,bestAbility,chooseLocks,needsDefense,card,context,effect,value,canPlay,defenseOptions,aiAction} from './engine.mjs';
+import {setHeroes,HEROES,hero,createGame,matches,abilities,bestAbility,chooseLocks,needsDefense,card,context,effect,value,canPlay,defenseOptions,aiAction} from './engine.mjs';
+import {dispatch} from './test-driver.mjs';
 setHeroes(JSON.parse(fs.readFileSync(new URL('./rules.json',import.meta.url))).heroes);
 function fixture(a='barbarian',b='moon-elf'){const s=createGame(a,b,{seed:123456});s.active=0;s.phase='roll';s.rollCount=1;s.dice=[1,1,1,4,6];return s}
 function next(s){const p=s.players[s.active];switch(s.phase){case'main1':return{type:'startRoll'};case'roll':{if(!s.rollCount)return{type:'roll'};if(s.rollCount<s.rollLimit&&!(p.tokens.constrict&&p.cp<1)){const keep=chooseLocks(s);if(!keep.every(Boolean)){if(s.locked.some((x,i)=>x!==keep[i]))return{type:'locks',values:keep};return{type:'roll'}}}const a=bestAbility(s);return a?{type:'declare',id:a.id}:{type:'pass'}}case'response':return{type:'activate'};case'defend':return{type:needsDefense(s)?'defend':'resolve'};case'boost':return{type:'proceed'};case'damage':case'resolve':return{type:'resolve'};case'main2':return p.hand.length>6?{type:'sell',id:p.hand[0]}:{type:'endTurn'};default:throw Error(s.phase)}}
@@ -19,7 +20,7 @@ test('every enabled card effect executes and all defense upgrades replace their 
  for(const h of HEROES.filter(h=>h.playable!==false))for(const ca of h.cards){
   const s=fixture(h.id,'barbarian');s.phase='main1';s.players[0].cp=15;s.players[0].hand=[ca.id];s.players[0].tokens={};for(const t of h.statuses)s.players[0].tokens[t.id]=2;s.players[0].tokens.stun=0;
   if(ca.upgrade){const after=dispatch(s,{type:'play',id:ca.id});assert.equal(after.players[0].upgrades[ca.upgrade].level,ca.level);assert.equal(canPlay(after,0,ca),false);if(ca.ability.dice)assert(defenseOptions(after.players[0]).some(d=>d.id===ca.upgrade&&d.level===ca.level));}
-  const c=context(s,0,[1,2,3,4,5]);try{effect(c,ca.ability?.ops||ca.ops)}catch(e){throw Error(h.id+'/'+ca.id+': '+e.message)}assert(s.players.every(p=>Number.isFinite(p.hp)&&Number.isFinite(p.cp)));
+  if(ca.id==='ransom'){s.active=1;s.phase='roll';s.rollCount=1;s.dice=[1,2,3,4,5];}const c=context(s,0,[1,2,3,4,5]);try{effect(c,ca.ability?.ops||ca.ops)}catch(e){throw Error(h.id+'/'+ca.id+': '+e.message)}assert(s.players.every(p=>Number.isFinite(p.hp)&&Number.isFinite(p.cp)));
  }
 });
 test('defense damage retaliates; attacker retains control during attack modifications',()=>{

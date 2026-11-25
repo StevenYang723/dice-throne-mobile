@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 const root = new URL('./', import.meta.url);
-const files = ['index.html', 'style.css', 'art-effects.css', 'art.mjs', 'effects.mjs', 'effects-model.mjs', 'ART-CREDITS.md', 'art-sources.json', 'app.mjs', 'presentation.mjs', 'engine.mjs', 'common.mjs', 'rules.json', 'icon.svg', 'manifest.webmanifest', '.nojekyll'];
+const files = ['index.html', 'style.css', 'choices.css', 'choice-flow.mjs', 'interaction-rules.mjs', 'art-effects.css', 'art.mjs', 'effects.mjs', 'effects-model.mjs', 'ART-CREDITS.md', 'art-sources.json', 'app.mjs', 'presentation.mjs', 'engine.mjs', 'common.mjs', 'rules.json', 'icon.svg', 'manifest.webmanifest', '.nojekyll'];
 const rules = JSON.parse(await fs.readFile(new URL('rules.json', root), 'utf8'));
 if (rules.heroes.length !== 24 || new Set(rules.heroes.map(h => h.id)).size !== 24) throw new Error('Expected 24 unique hero records');
 for (const h of rules.heroes) {
